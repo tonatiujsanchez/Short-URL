@@ -1,0 +1,12 @@
+.main{
+    position: fixed;
+    left: 350px;
+    right: 0;
+    top: 79px;
+    bottom: 0;
+    overflow: auto;
+}
+.main .main-result{
+    text-align: center;
+    margin-top: 150px;
+}

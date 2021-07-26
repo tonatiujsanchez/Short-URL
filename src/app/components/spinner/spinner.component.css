@@ -1,0 +1,20 @@
+.text-cargando{
+    margin-top: 16px;
+}
+.spinner{
+    margin: 0 auto;
+    border: 5px solid #e9edf1;
+    border-left-color: #00ca83;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    animation: spin .6s linear infinite;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
