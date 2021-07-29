@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ShortUrlService } from '../../services/short-url.service';
+import { UrlShort } from '../../interfaces/url-short.interface';
 
 @Component({
   selector: 'app-result',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  constructor() { }
+  get urlShort(): UrlShort | null {
+    return this._shortUrl.urlShort;
+  }
+
+  constructor( private _shortUrl: ShortUrlService ) { }
 
   ngOnInit(): void {
   }

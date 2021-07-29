@@ -1,10 +1,14 @@
 <div class="imput-componet">
     <div class="form">
         <label for="url">Ingrese una url</label>
-        <input id="url" type="text" placeholder="url">
+        <input type="text" 
+                id="url" 
+                [(ngModel)]="url"
+                placeholder="url"
+                (keyup.enter)="getUrl()">
         <div class="form-footer">
-            <p class="msj-error">La URL ingresada no es valida</p>
-            <button>Acortar</button>
+            <p class="msj-error" [ngClass]="{ 'error-visible': _shortUrl.isError || isVoid }" >{{msjError}}</p>
+            <button (click)="getUrl()">Acortar</button>
         </div>
     </div>
 </div>

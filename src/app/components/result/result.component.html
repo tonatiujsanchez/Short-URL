@@ -1,2 +1,8 @@
-<a href="https://bit.ly/3eXHZj4" target="_black">https://bit.ly/3eXHZj4</a>
-<p>http://legadodetlapa.com.mx/montana/puedo-hacer-lo-que-quiera-contigo-la-tragedia-de-la-venta-de-ninas-en-la-region-de-la-montana</p>
+<ng-container *ngIf="urlShort != null">
+    <a [href]="urlShort.link" target="_black">{{ urlShort.link }}</a>
+    <p>{{ urlShort.long_url }}</p>
+</ng-container>
+
+<div class="msj" *ngIf="urlShort === null">
+    <p>Seleccione o Ingrese una nueva URL para acortar</p>
+</div>

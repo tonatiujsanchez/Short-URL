@@ -2,7 +2,7 @@
 
     <app-input></app-input>
     <div class="main-result">
-        <!-- <app-spinner></app-spinner> -->
-        <app-result></app-result>
+        <app-spinner *ngIf="_shortUrl.isLoading" ></app-spinner>
+        <app-result *ngIf="!_shortUrl.isLoading"></app-result>
     </div>
 </div>
