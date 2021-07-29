@@ -1,45 +1,9 @@
 <div class="sidebar">
     <h2>Historial</h2>
     <ol>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
-        </li>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
-        </li>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
-        </li>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
-        </li>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
-        </li>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
-        </li>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
-        </li>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
-        </li>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
-        </li>
-        <li>
-            <span class="url-origin">http://legadodetlapa.com.mx/montana...</span>
-            <span class="url-short">https://bit.ly/3eXHZj4</span>
+        <li *ngFor="let item of hostorial" (click)="mostrarUrl( item )">
+            <span class="url-origin">{{ item.long_url }}</span>
+            <span class="url-short">{{ item.link }}</span>
         </li>
     </ol>
 </div>

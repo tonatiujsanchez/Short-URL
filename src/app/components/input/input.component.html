@@ -7,7 +7,7 @@
                 placeholder="url"
                 (keyup.enter)="getUrl()">
         <div class="form-footer">
-            <p class="msj-error" [ngClass]="{ 'error-visible': _shortUrl.isError || isVoid }" >{{msjError}}</p>
+            <p class="msj-error" [ngClass]="{ 'error-visible': _shortUrl.isError || _shortUrl.isVoid }" >{{msjError}}</p>
             <button (click)="getUrl()">Acortar</button>
         </div>
     </div>

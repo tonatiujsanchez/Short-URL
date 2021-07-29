@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ShortUrlService } from '../../services/short-url.service';
+import { UrlShort } from '../../interfaces/url-short.interface';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
 
-  constructor() { }
+  get hostorial():UrlShort[]{
+    return this._shortUrl.historial;
+  }
 
-  ngOnInit(): void {
+  constructor( private _shortUrl: ShortUrlService ) { }
+
+
+  mostrarUrl( item: UrlShort ){
+    this._shortUrl.mostrarUrl( item );
   }
 
 }
