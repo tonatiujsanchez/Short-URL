@@ -62,24 +62,21 @@ export class ShortUrlService {
 
   saveStorage( item: UrlShort ){
 
-    // 29/07/2021  
-    // TODO: Refactorizar la comprobación del item existente
+    // let existe: boolean = false;
+    // this._historial.forEach( ({ link, long_url })=>{
+    //   if( item.long_url === long_url ){
+    //     existe = true;
+    //     return;
+    //   }
+    // });
 
-    let existe: boolean = false;
-    this._historial.forEach( ({ link, long_url })=>{
-      if( item.long_url === long_url ){
-        existe = true;
-        return;
-      }
-    });
-    
+    let exist = this._historial.filter( _item => _item.long_url == item.long_url );
 
-    
-    if( !existe ){
+    if( exist.length <= 0 ){
       this._historial.unshift( item );
+      this._historial = this._historial.slice(0, 10);  // Acortamos el arreglo antes de guardarlo en el Storage
       localStorage.setItem('historialURLs', JSON.stringify( this._historial ));
     }
-
   }
 
 

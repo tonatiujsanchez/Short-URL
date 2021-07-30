@@ -2,7 +2,7 @@
     <h2>Historial</h2>
     <ol>
         <li *ngFor="let item of hostorial" (click)="mostrarUrl( item )">
-            <span class="url-origin">{{ item.long_url }}</span>
+            <span class="url-origin">{{ item.long_url | slice:0:35 }} ...</span>
             <span class="url-short">{{ item.link }}</span>
         </li>
     </ol>
